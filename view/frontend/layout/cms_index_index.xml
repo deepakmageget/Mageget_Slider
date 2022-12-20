@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+              <block class="Mageget\Slider\Block\GetBanner" name="mageget_home_index" template="Mageget_Slider::slider.phtml"/>
+              <block class="Mageget\Slider\Block\BestSeller" name="mageget_home_index_bestseller" template="Mageget_Slider::bestseller.phtml" after="mageget_home_index"/>
+              <block class="Magento\Framework\View\Element\Template" name="mageget_recent_most_view" template="Mageget_Slider::mostview.phtml" after="mageget_home_index_bestseller"/>
+              <block class="Mageget\Slider\Block\ProductCollection" name="mageget_allProduct_view" template="Mageget_Slider::allproduct.phtml" after="-"/>
+        </referenceContainer>
+    </body>
+</page>
+

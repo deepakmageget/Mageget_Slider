@@ -1,0 +1,46 @@
+<?php // @codingStandardsIgnoreFile
+$blockObj = $block->getLayout()->createBlock(Mageget\Slider\Block\RecentMostView::class);
+$collection = $blockObj->getMostViewedProducts();
+$mediaurl = $blockObj->mediaurl() . "catalog/product";
+?>
+
+<div class="best-seller-heading">
+    <h1> Most View Product </h1>
+</div>
+<div class="owl-slider">
+<div id="recentviewSlider" class="owl-carousel">
+
+<?php foreach ($collection as $product) {
+      $product_name = $product->getName();
+      $product_name = substr("$product_name", 0, 15);
+      $price = $product->getPrice();
+    if (!$price == 0) 
+    {
+        $price = str_replace(".000000", "", $price);
+    }
+    ?>
+
+    <div class="post-slide">
+      <div class="post-img">
+        <img src="<?php echo $mediaurl . $product->getImage(); ?>" alt="">
+        <a href="<?php echo $product->getProductUrl(); ?>" class="over-layer"><i class="fa fa-link"></i></a>
+      </div>
+      <div class="post-content">
+        <h3 class="post-title">
+          <a href="<?php echo $product->getProductUrl(); ?>"><?php echo $product_name; ?></a> 
+        </h3> 
+        <p>$<?php echo $price; ?></p>
+         <!-- <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p> -->
+        <a href="<?php echo $product->getProductUrl(); ?>" class="read-more">view more</a>
+      </div>
+    </div>
+    <?php
+} ?>
+   
+  </div>
+
+</div>
+
+
+ 
+

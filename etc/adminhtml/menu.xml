@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+       
+    <add id="Mageget_Slider::bannerslider" title="Manage Slider" 
+         module="Mageget_Slider"
+         sortOrder="20" 
+         parent="Mageget_Enquire::manager" 
+         action="managebanner/banner/index" 
+         resource="Mageget_Slider::bannerslider"/>
+         
+
+ <!-- <add id="Mageget_Slider::settings" 
+        title="Settings" translate="title" 
+        module="Mageget_Slider" 
+        parent="Mageget_Enquire::manager" 
+        sortOrder="60" 
+        dependsOnModule="Mageget_Slider" 
+        resource="Mageget_Slider::settings"/> -->
+
+
+
+    <!-- <add id="Mageget_Slider::add_row_configuration"
+                title="Configuration Slider"
+                resource="Magento_Backend::content"
+                module="Mageget_Slider"
+                sortOrder="70"
+                action="adminhtml/system_config/edit/section/slider"
+                parent="Mageget_Enquire::settings" /> -->
+   </menu>
+</config>

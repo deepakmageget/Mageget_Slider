@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<widgets
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget class="Mageget\Slider\Block\Widget\BestSeller" id="mageget_Slider_bestseller">
+		<label>Best Seller</label>
+		<description></description>
+		<parameters>
+			<parameter name="bestseller" sort_order="10" visible="true" xsi:type="text">
+				<label>Title</label>
+			</parameter>
+		
+		</parameters>
+	</widget>
+</widgets> 
